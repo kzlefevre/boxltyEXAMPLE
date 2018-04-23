@@ -1,0 +1,64 @@
+﻿/*various buttons here*/
+
+.btn {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    border-radius: 0;
+    color: #fff;
+}
+
+.btn-lg {
+    min-width: 210px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btn-md {
+    min-width: 170px;
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
+.btn-sm {
+    min-width: 130px;
+    padding: 5px 10px;
+    font-size: 12px
+}
+
+.btn-blue {
+    background: #88a8cf;
+}
+
+.btn-blue:hover {
+    background:#7190b4;
+    color:$white;
+}
+
+.btn-pink {
+    background:#d63b96;
+}
+
+.btn-pink:hover {
+    background: #b93181;
+    color:$white;
+}
+
+.btn-gray {
+    background: #BEC1C4;
+    color:white;
+}
+
+.btn-gray:hover {
+    background: #00B050;
+    color:$white;
+}
+
+.btn-gray2 {
+    background: #BEC1C4;
+    color:white;
+}
+
+.btn-gray2:hover {
+    background: #95989A;
+    color:$white;
+}

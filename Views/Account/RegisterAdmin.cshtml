@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Register Admin";
+    Layout = "~/Views/Shared/_tinyLayout.cshtml";
+}
+
+<div id="main">
+    <div class="container">
+        <div class="row text-center">
+
+            <div id="page-logo">
+                <img src="/img/logos/logo-red.png" class="img-responsive" alt="logo"/>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <span class="glyphicon glyphicon-lock"></span> Activate Your Account
+                    </div>
+                    <span class="panel-title-sm pull-right padding-right-sm"><b></b></span> 
+                </div>
+
+                <form id="f_regadmin" method="POST" data-bind="submit:submit">
+                    @Html.AntiForgeryToken()
+                    <input name="h_word" type="hidden" data-bind="value: sha1()"/>
+                    <input name="h_guid" type="hidden" value="@TempData["guid"]"/>
+                    <input name="h_note" type="hidden" value="@TempData["note"]"/>
+                    <input name="h_emal" type="hidden" value="@TempData["emal"]"/>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+                                <input type="email" name="t_emal" class="form-control" maxlength="256" autocomplete="off" placeholder="Email Address" required disabled value="@TempData["emal"]"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><span class="glyphicons glyphicons-keys"></span> </span>
+                                <input id="t_word" type="password" class="form-control" maxlength="16" autocomplete="off" placeholder="Create Password" required data-bind="value: word1, validationElement: word1"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><span class="glyphicons glyphicons-keys"></span> </span>
+                                <input type="password" class="form-control" maxlength="16" autocomplete="off" placeholder="Confirm Password" required data-bind="value: word2, validationElement: word2"/>
+                            </div>
+                        </div>
+                        <div class="alert alert-warning login-alert" style="display: none;">
+                            <b>Invalid</b> username or password.
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group margin-bottom-none">
+                            <button class="btn btn-primary pull-right margin-top" type="submit">Continue</button>
+                            <b class="text-info">@TempData["name"]</b><br/><span>Please create an <u title="Password must be 8-16 characters, with at least one capital and one lowercase letter, and one number.">account password</u><br/> and press continue.</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,90 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_publicLayout.cshtml";
+}
+
+<section class="property-details margin-top">
+    <div class="container">
+        <div class="row spacer-large">
+            <div class="col-md-12">
+                <h1>327 E. Maple St, York, PA 17403</h1>
+                    <ul class="list-horizontal">
+                        <li>$145,000 <span>/ EST. $283 mo.</span></li>
+                        <li>3 BED</li>
+                        <li>2 BATH</li>
+                        <li>1,250 sqft</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="row spacer">
+            <div class="col-md-6"><img src="http://placehold.it/500x500"></div>
+            <div class="col-md-6">
+                <div class="picture-details">
+                    <img src="http://placehold.it/180x180">
+                </div>
+                <div class="picture-details">
+                    <img src="http://placehold.it/180x180">
+                </div>
+                <div class="picture-details spacer">
+                    <img src="http://placehold.it/180x180">
+                </div>
+                <div class="picture-details spacer">
+                    <img src="http://placehold.it/180x180">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="property-info spacer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>ABOUT THE PROPERTY</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum magna lacus. Ut rhoncus, sem ac congue molestie, erat diam commodo nisl, vitae fringilla ligula enim eget odio. Praesent a augue nisi. Suspendisse tortor ex, faucibus vel rhoncus nec, tincidunt vel mi. Donec aliquet malesuada ipsum sed sagittis. Vestibulum sed posuere lorem.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="property-details-content bg spacer-large section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>KEY FEATURES</h1>
+                <ul>
+                    <li>Lot: 3,497 sqft</li>
+                    <li>Single Family Home</li>
+                    <li>Built in 1942</li>
+                    <li>Attached Garage</li>
+                    <li>Central Air</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h1>FACTS</h1>
+                <ul>
+                    <li>Lot: 3,497 sqft</li>
+                    <li>Single Family Home</li>
+                    <li>Built in 1942</li>
+                    <li>Attached Garage</li>
+                    <li>Central Air</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h1>CONTACT SELLER</h1>
+                <form class="contact-seller">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+                            <input type="text" name="name" tabindex="3" class="form-control" maxlength="32" autocomplete="off" placeholder="Your Name" required data-bind="value: namelast, validationElement: namelast" />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicons glyphicons-e-mail"></span> </span>
+                        <input type="email" name="t_email" tabindex="4" class="form-control" maxlength="256" autocomplete="off" placeholder="Email Address" required data-bind="value: emal, validationElement: emal" />
+                    </div>
+                    <button class="btn btn-pink pull-right margin-btn" type="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,2306 @@
+/* line 1, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 5, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+body {
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  font-family: "TradeGothic", sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  /* line 5, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 17, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+  body.home {
+    width: 100vw;
+  }
+}
+
+/* line 24, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+html, body {
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* line 29, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+a {
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+/* line 35, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_selectors.scss */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 2rem 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/*various buttons here*/
+/* line 3, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border-radius: 0;
+  color: #fff;
+}
+
+/* line 10, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-lg {
+  min-width: 210px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* line 16, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-md {
+  min-width: 170px;
+  padding: 6px 10px;
+  font-size: 15px;
+}
+
+/* line 22, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-sm {
+  min-width: 130px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* line 28, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-blue {
+  background: #88a8cf;
+}
+
+/* line 32, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-blue:hover {
+  background: #7190b4;
+  color: #fff;
+}
+
+/* line 37, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-pink {
+  background: #d63b96;
+}
+
+/* line 41, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-pink:hover {
+  background: #b93181;
+  color: #fff;
+}
+
+/* line 46, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-gray {
+  background: #BEC1C4;
+  color: white;
+}
+
+/* line 51, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-gray:hover {
+  background: #00B050;
+  color: #fff;
+}
+
+/* line 56, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-gray2 {
+  background: #BEC1C4;
+  color: white;
+}
+
+/* line 61, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_buttons.scss */
+.btn-gray2:hover {
+  background: #95989A;
+  color: #fff;
+}
+
+/* line 1, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.btn.user_dropdown {
+  padding: 0;
+}
+
+/* line 5, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* line 9, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: -160px;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+/* line 19, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* line 23, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+/* line 37, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
+}
+
+/* line 41, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+/* line 45, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
+/* line 53, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+ul.dropdown-menu > li > a:hover {
+  color: #86A8D0;
+}
+
+/* line 57, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/layout/_header.scss */
+li.dropdown-submenu > a:hover {
+  color: #86A8D0;
+}
+
+/* line 18, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+/* line 37, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 41, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 47, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+body {
+  background: #fff;
+}
+
+/* line 50, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 54, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 58, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 62, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 66, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 70, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+/* line 76, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.logo img {
+  width: 140px;
+  height: auto;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  margin: 5px 15px;
+}
+
+/* line 87, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h1.tagline {
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+/* line 94, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+p {
+  margin-bottom: 20px;
+}
+
+/* line 98, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.clear {
+  height: 1px;
+  clear: both;
+  font-size: 0px;
+  line-height: 0px;
+  overflow: hidden;
+}
+
+/** BOOTSTRAP OVERRIDES **/
+@media (min-width: 1400px) {
+  /* line 103, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .container {
+    width: 1370px;
+  }
+}
+
+/************** START OF MATT'S CODE*/
+/* line 111, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.navbar {
+  background: #000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  position: fixed;
+  padding: 5px 0;
+}
+
+/* line 123, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.navbar.nav_small {
+  height: auto;
+  min-height: 0;
+  padding: 5px 0;
+  opacity: 0.85;
+}
+
+/* line 129, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.navbar.nav_small .logo {
+  padding-top: 0;
+}
+
+/* line 132, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.navbar.nav_small .logo img {
+  width: 170px;
+  height: auto;
+  margin-top: 18px;
+}
+
+/* line 137, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.custom-nav {
+  /*margin-top:51px;
+    margin-bottom:25px;*/
+}
+
+/* line 141, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+#navbar {
+  text-align: right;
+  float: right;
+  margin-top: 10px;
+}
+
+/* line 146, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.nav.navbar-nav {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 17pt;
+}
+
+/* line 151, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.nav > li > a {
+  color: #fff;
+  border-bottom: solid 4px transparent;
+}
+
+/* line 155, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.nav > li > a:hover {
+  background: none;
+  border-bottom: solid 4px #d63b96;
+}
+
+/* line 160, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+a.header-link {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 11pt;
+  color: #fff;
+}
+
+/* line 167, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.welcome {
+  position: relative;
+  top: 50px;
+}
+
+/* line 171, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.btn-custom {
+  background: none;
+  border: 0;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 11pt;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+/* line 181, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+a.toggle-login {
+  color: #fff;
+}
+
+/* line 184, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+a.toggle-login:hover {
+  color: #282828;
+}
+
+/* line 187, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.home {
+  background: url(/img/housebg.jpg) #000;
+  background-size: cover;
+}
+
+/* line 191, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.buy {
+  background: url(/img/buy-bg.png) #000;
+  background-size: cover;
+}
+
+/* line 195, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.lease {
+  background: url(/img/lease-bg.png) #000;
+  background-size: cover;
+}
+
+/* line 199, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.sell {
+  background: url(/img/sell-bg.png) #000;
+  background-size: cover;
+}
+
+/* line 203, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.faq {
+  background: #ccc;
+}
+
+/* line 206, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.boxlty {
+  background: url(/img/whyboxlty-bg.png) #000;
+  background-size: cover;
+}
+
+/* line 210, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit.support {
+  background: url(/img/support-bg.png) #000;
+  background-size: cover;
+}
+
+/* line 214, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-unit {
+  background-size: cover;
+  padding-bottom: 400px;
+  background-position: left bottom;
+  position: relative;
+}
+
+/* line 220, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 229, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.container.hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 233, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.hero-content {
+  margin-top: 495px;
+}
+
+/* line 236, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h1.your-move {
+  font-size: 64px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 243, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h2.sub {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #969696;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 252, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.no-color {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* line 256, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.spacer {
+  margin-top: 30px !important;
+}
+
+/* line 259, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.center {
+  text-align: center;
+}
+
+/* line 262, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.input-group .form-control:first-child, .input-group-addon:first-child,
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  height: 50px;
+}
+
+/* line 269, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.home-search .form-control {
+  height: 58px;
+  width: 50%;
+  border-radius: 0;
+  font-size: 20px !important;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 277, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.btn-search {
+  background: #d63b96;
+  padding: 11px;
+  border-radius: 0;
+  color: #fff;
+  font-size: 24px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  min-width: 200px;
+}
+
+/* line 288, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h1 {
+  font-size: 48px;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+}
+
+/* line 294, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h2 {
+  font-size: 32px;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* line 301, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h3 {
+  font-size: 28px;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+/* line 308, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h4 {
+  font-size: 24px;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 314, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+p.center {
+  text-align: center;
+}
+
+/* line 317, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+p.home-text {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+}
+
+/* line 324, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.spacer-large {
+  margin-top: 100px;
+}
+
+/**FEATURED LISTINGS SECTION*/
+/* line 329, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control {
+  opacity: 1;
+  text-shadow: none;
+  background-color: transparent;
+  width: 50px;
+  color: #bbb;
+  font-size: 30px;
+}
+
+/* line 337, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control.right {
+  right: -35px;
+}
+
+/* line 341, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control.left {
+  left: -35px;
+}
+
+/* line 345, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control:hover, .carousel-control:focus {
+  outline: 0;
+  color: #999;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* line 352, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control .fa-chevron-left,
+.carousel-control .fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 5;
+  display: inline-block;
+}
+
+/* line 361, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control .fa-chevron-left {
+  left: 0;
+}
+
+/* line 364, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control .fa-chevron-right {
+  right: 0;
+}
+
+/* line 369, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+
+/* line 374, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.icon-pink {
+  color: #d63b96;
+  font-size: 30px !important;
+}
+
+/* line 379, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.icon-gray {
+  color: #999;
+  font-size: 30px !important;
+}
+
+/* line 384, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.featured-listings {
+  background: #efefef;
+  padding-bottom: 80px;
+}
+
+/* line 388, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.featured-listings h1, .recently-added h1 {
+  color: #86a8d0;
+}
+
+/* line 391, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-box {
+  background: #f5f5f5;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* line 396, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-box img {
+  width: 100%;
+}
+
+/* line 399, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.gray-footer {
+  background: #efefef;
+}
+
+/* line 402, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-box-details {
+  padding: 15px;
+  position: relative;
+}
+
+/* line 406, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-box-left {
+  float: left;
+}
+
+/* line 412, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-box h2 {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* line 419, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-box h3 {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-align: left;
+  line-height: 16px;
+  margin: 0;
+}
+
+/* line 427, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.address {
+  margin-top: 10px;
+}
+
+/* line 434, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-details {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* line 439, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-details-content {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* line 443, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-details > .listing-details-content > span {
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 10px;
+  color: #a9a8a8;
+  font-weight: 600;
+}
+
+/* line 450, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.listing-details > .listing-details-content > .icon-fix {
+  position: relative;
+  bottom: 11px;
+}
+
+/* line 454, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.buy, section.lease {
+  background: #efefef;
+}
+
+/*** BUY/SELL/LEASE SECTION*/
+/* line 460, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h1.no-margin,
+h2.no-margin,
+h3.no-margin,
+h4.no-margin,
+h5.no-margin,
+h6.no-margin {
+  margin: 0;
+}
+
+/* line 470, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.gray-bg {
+  background: #efefef;
+}
+
+/* line 474, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.section-pad.small {
+  padding: 40px 0;
+}
+
+/* line 477, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.section-pad.medium {
+  padding: 60px 0;
+}
+
+/* line 480, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.section-pad.large {
+  padding: 80px 0;
+}
+
+/* line 484, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.section-spacer {
+  margin-top: 80px;
+}
+
+/* line 487, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.buy h1, section.sell h1, section.lease h1 {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 30px;
+  /*added once gutters removed from grid*/
+}
+
+/* line 492, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.buy p, section.sell p, section.lease p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 30px;
+  /*added once gutters removed from grid*/
+}
+
+/* line 499, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+img.half_width {
+  width: 100%;
+}
+
+/* line 503, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.col-md-6.half-text {
+  padding: 0 8%;
+}
+
+/* line 507, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.col-md-6.half-text > h1 {
+  margin: 0 0 20px 0;
+}
+
+/* line 511, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.col-md-6.half-text > p {
+  margin: 0;
+}
+
+/* line 515, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.support {
+  margin-top: -300px;
+}
+
+/* line 519, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.phone-img {
+  width: auto;
+  max-width: 360px;
+}
+
+/* line 524, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.sell_img {
+  position: relative;
+}
+
+/* line 528, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.sell_img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 539, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.sell_img_overlay > h1 {
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+/* line 548, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.sell_img_overlay > h1 > span {
+  font-weight: bold;
+}
+
+/***FOOTER */
+/* line 554, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+footer {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* line 559, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+footer h3 {
+  color: #d73b92;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+
+/* line 565, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+footer ul {
+  margin-top: 20px;
+}
+
+/* line 568, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+footer ul li {
+  margin-top: 5px;
+}
+
+/* line 571, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+footer ul li a {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+/* line 576, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+footer ul li a:hover {
+  color: #d63b96;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* line 582, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.copyright {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* line 587, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 590, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 593, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.no-pad.left {
+  padding-left: 0;
+}
+
+/* line 596, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.no-pad.right {
+  padding-right: 0;
+}
+
+/**buy page*/
+/* line 602, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+h3.sub {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/**sell page*/
+/***
+Pricing table
+***/
+/* line 613, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing {
+  position: relative;
+  margin-bottom: 15px;
+  border: 20px 20px 0px 20px solid #dfdfdf;
+}
+
+/* line 619, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-active {
+  margin-top: -20px;
+  border: 20px 20px 0px 20px solid #dfdfdf;
+}
+
+/* line 624, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-head {
+  text-align: center;
+}
+
+/* line 628, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-head h3,
+.pricing-head h4 {
+  margin: 0;
+  line-height: normal;
+}
+
+/* line 634, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-head h3 span,
+.pricing-head h4 span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #d63b96;
+}
+
+/* line 643, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-head h3 {
+  font-weight: 300;
+  color: #000;
+  padding: 12px 0;
+  font-size: 27px;
+  background: #dfdfdf;
+  border: 5px solid #dfdfdf;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 653, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-footer h3 {
+  font-weight: 600;
+  color: #fff;
+  padding: 12px 0px 0px 0px;
+  font-size: 27px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 661, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-footer h4 {
+  color: #fff;
+  padding: 5px 0;
+  font-size: 54px;
+  font-weight: 300;
+}
+
+/* line 668, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-head-active h4 {
+  color: #36d7ac;
+}
+
+/* line 672, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-footer h4 i {
+  top: -8px;
+  font-size: 28px;
+  font-style: normal;
+  position: relative;
+}
+
+/* line 679, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-footer h4 span {
+  top: -10px;
+  font-size: 14px;
+  font-style: normal;
+  position: relative;
+}
+
+/* line 685, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.extra {
+  padding-bottom: 30px !important;
+}
+
+/*Pricing Content*/
+/* line 690, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-content li {
+  font-size: 16px;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  padding: 7px 15px;
+  border-bottom: solid 1px #f5f9e7;
+}
+
+/*Pricing Footer*/
+/* line 699, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.pricing-footer {
+  color: #fff;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+  padding: 0 20px 19px;
+  background: #d63b96;
+  min-height: 100px;
+}
+
+/*Priceing Active*/
+/* line 710, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.price-active,
+.pricing:hover {
+  z-index: 9;
+}
+
+/* line 715, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.price-active h4 {
+  color: #36d7ac;
+}
+
+/* line 719, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.no-space-pricing .pricing:hover {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* line 723, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.no-space-pricing .price-active .pricing-head h4,
+.no-space-pricing .pricing:hover .pricing-head h4 {
+  color: #36d7ac;
+  padding: 15px 0;
+  font-size: 80px;
+  transition: color 0.5s ease-in-out;
+}
+
+/* line 730, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.stripe-even {
+  background: #f6f6f6;
+}
+
+/* line 733, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.stripe-odd {
+  background: #ececec;
+}
+
+/* line 737, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.lease-footer {
+  background: #efefef;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+/* line 745, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-box {
+  background: #ddd;
+  padding: 20px;
+  min-height: 375px;
+}
+
+/* line 750, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-header h1 {
+  text-align: center;
+  color: #000;
+  margin-top: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 756, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-header h3 {
+  text-align: center;
+  color: #000;
+  margin-top: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+}
+
+/* line 763, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-content {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 200px;
+}
+
+/* line 769, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.why-boxlty .get-started-content {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 400px;
+}
+
+/* line 775, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-content h3 {
+  text-align: center;
+  color: #000;
+  margin-top: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+}
+
+/* line 782, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-content p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* line 788, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.section-bg {
+  background: #f6f6f6;
+  padding: 30px 0px 30px 0px;
+}
+
+/* line 793, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.box-left {
+  background: #fff;
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+/* line 799, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.box-right {
+  background: #fff;
+  float: left;
+  width: 70%;
+  height: 290px;
+}
+
+/* line 805, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.box-right-bottom {
+  background: #fff;
+  float: left;
+  width: 70%;
+  height: 50px;
+}
+
+/* line 811, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.box-right p {
+  padding: 40px 25px 0px 25px;
+}
+
+/* line 814, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.box-right h4 {
+  padding-left: 30px;
+}
+
+/* line 817, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.box-right p, box-right-bottom p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 821, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.testimonial-box {
+  min-height: 300px;
+}
+
+/* line 824, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+p.testimonial {
+  font-size: 16px;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 829, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.badge {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-color: #d63b96;
+  min-width: 20px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+/* line 837, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.fa-chevron-circle-right, .fa-chevron-circle-left {
+  font-size: 28px !important;
+  position: relative;
+  top: 6px;
+  border-radius: 20px;
+  color: #d63b96;
+}
+
+/* line 848, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+/* line 850, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+nav.navbar.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+/* line 851, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+nav.navbar.shrink a {
+  font-size: 15px;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+}
+
+/* line 856, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+nav.navbar.shrink .navbar-toggle {
+  margin: 8px 15px 8px 0;
+  padding: 4px 5px;
+}
+
+/* line 863, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.navbar-toggle,
+.navbar-toggle .icon-bar {
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+}
+
+/* line 872, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.navbar-toggle:hover,
+.navbar-toggle:hover > .icon-bar {
+  border: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+/* line 877, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+form.contact input, form.contact select {
+  min-height: 50px;
+  border-radius: 0;
+  border: 3px solid #ccc;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* line 884, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.description {
+  min-height: 100px;
+}
+
+/* line 890, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.faq h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+/* line 895, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.faq p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+/* line 900, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.circle {
+  width: 300px;
+  height: 300px;
+  background: #eaeaea;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+  text-align: center;
+  padding-top: 41px;
+}
+
+/* line 911, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.bg {
+  background: #efefef;
+}
+
+/* line 915, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+select.form-control.custom {
+  border-radius: 0;
+  border: solid 2px #ccc;
+  height: 45px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+/* line 922, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.responsive-only-search {
+  margin-top: 300px;
+}
+
+/* line 928, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.get-started-header > h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+}
+
+/* line 933, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.btn-blue {
+  background: #86a8d0;
+}
+
+/* line 939, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-listing h1 {
+  color: #86a8d0;
+}
+
+/* line 942, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.margin-top {
+  margin-top: 150px;
+}
+
+/* line 948, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-details h1 {
+  color: #86a8d0;
+  text-align: left;
+}
+
+/* line 952, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.list-horizontal li {
+  display: inline-block;
+  color: #666;
+  text-align: left;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+/* line 960, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.list-horizontal li:before {
+  content: '\00a0\2022\00a0\00a0';
+  color: #ccc;
+}
+
+/* line 964, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.list-horizontal li:first-child:before {
+  content: '';
+}
+
+/* line 967, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-details ul > li > span {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+/* line 972, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.picture-details {
+  width: 200px;
+  float: left;
+}
+
+/* line 976, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-details-content h1, section.property-info h1 {
+  font-size: 24px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+}
+
+/* line 982, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-details-content ul {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+  margin-top: 20px;
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+/* line 991, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.section-padding {
+  padding: 30px 0 30px 0;
+}
+
+/* line 994, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.property-info p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 1000, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-details-content input {
+  height: 45px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 1004, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.property-details-content .form-control, .input-group-addon {
+  border: solid 2px #ccc;
+  border-radius: 0;
+  height: 45px !important;
+}
+
+/* line 1009, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+form.contact-seller {
+  margin-top: 20px;
+}
+
+/* line 1012, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.margin-btn {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 1018, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .logo img {
+    width: 250px;
+    height: auto;
+    margin: 0;
+  }
+  /* line 1024, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .navbar {
+    padding: 40px 0;
+  }
+  /* line 1027, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .navbar-nav li {
+    float: none !important;
+    display: inline-block;
+  }
+  /* line 1031, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  ul.navbar-nav {
+    text-align: center;
+  }
+}
+
+/* line 1036, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.section-padding {
+  padding-bottom: 50px;
+}
+
+/* line 1042, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.register, section.login {
+  margin-top: 300px;
+}
+
+/* line 1046, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.register .form-control, section.login .form-control {
+  border-radius: 0;
+  border: solid 2px #ccc;
+}
+
+/* line 1050, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+section.register input, section.login input {
+  height: 45px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+/* line 1056, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+.footer-spacer {
+  margin-bottom: 300px;
+}
+
+@media (max-width: 993px) {
+  /* line 1063, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .hero-unit {
+    display: none;
+  }
+  /* line 1066, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .listing-box-left, .listing-box-right {
+    width: 100%;
+  }
+  /* line 1069, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .listing-box {
+    width: 100%;
+    /*height: 375px;*/
+    background: none;
+  }
+  /* line 1074, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .listing-box h2, .listing-box h3 {
+    text-align: center;
+  }
+  /* line 1077, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .listing-details {
+    /*position:relative;
+        margin-top:30px;*/
+    display: none;
+  }
+  /* line 1082, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  section.buy, section.buy h1, section.sell, section.sell h1, section.lease, section.lease h1 {
+    text-align: center;
+  }
+  /* line 1085, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  section.footer h3, footer ul, footer p {
+    text-align: center;
+  }
+  /* line 1088, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  section.footer .text-right {
+    display: none;
+  }
+  /* line 1091, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  section.faq .col-md-4 {
+    text-align: center;
+  }
+  /* line 1094, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  section.faq .circle {
+    display: none;
+  }
+}
+
+@media (min-width: 994px) {
+  /* line 1100, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_index.scss */
+  .responsive-only-search {
+    display: none;
+  }
+}
+
+/* line 1, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+section.account_subnav {
+  padding-top: 168px;
+}
+
+/* line 5, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.subnav_left {
+  float: left;
+}
+
+/* line 9, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.subnav_right {
+  float: right;
+}
+
+/* line 12, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.nav_subnav > li > a {
+  color: #777;
+}
+
+/* line 16, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.nav_subnav > li > a:hover,
+.nav_subnav > li > a:focus,
+.nav_subnav .open > a,
+.nav_subnav .open > a:hover,
+.nav_subnav .open > a:focus {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+/* line 25, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.dropdown-menu.nav_subnav {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* line 31, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+section#listing > section {
+  padding: 30px 0;
+}
+
+/* line 35, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.header_details_left {
+  float: left;
+}
+
+/* line 39, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+h1.header_address {
+  color: #86A8D0;
+  margin: 0;
+  font-size: 42px;
+}
+
+/* line 45, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+h1.header_address.medium {
+  font-size: 26px;
+}
+
+/* line 49, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.header_sub_details {
+  font-size: 20px;
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 56, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.header_sub_details.small {
+  font-size: 14px;
+}
+
+/* line 60, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.header_mortgage {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: normal;
+}
+
+/* line 66, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.header_details_right {
+  float: right;
+  font-size: 12px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* line 74, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.listing_status {
+  color: #86A8D0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* line 81, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+section#listing_photos {
+  padding-bottom: 0 !important;
+}
+
+/* line 85, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.listing_main_photo img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* line 90, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.listing_thumbs {
+  margin: 15px 0;
+}
+
+/* line 94, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.listing_thumbs > img {
+  width: 100%;
+}
+
+/* line 98, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+#listing_overview p {
+  margin: 0;
+}
+
+/* line 102, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+section#listing_details {
+  background: #EFEFEF;
+}
+
+/* line 106, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+h1.listing_sect_h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 20px 0;
+  font-weight: normal;
+}
+
+/* line 114, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+h2.listing_sub_h2 {
+  font-size: 18px;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: normal;
+}
+
+/* line 122, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+ul.details_list {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+/* line 128, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+ul.details_list li {
+  margin: 5px 0;
+}
+
+/* line 132, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+ul.details_list.result {
+  font-size: 13px;
+  margin: 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* line 140, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+ul.details_list.result > li {
+  margin: 0;
+  padding: 0;
+  color: #777;
+  background: transparent;
+}
+
+/* line 147, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.contact_seller_wrap {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 152, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.seller_img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border: solid 1px #ddd;
+}
+
+/* line 160, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.seller_img img {
+  width: 120%;
+}
+
+/* line 164, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.seller_img.small {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border: solid 1px #ddd;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 174, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_listing-details.scss */
+.seller_img.small img {
+  width: 120%;
+}
+
+/* line 1, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.search_results {
+  min-height: 800px;
+}
+
+/* line 5, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.search_sidebar {
+  padding: 10px 0;
+}
+
+/* line 9, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.search_sidebar label {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #888;
+  display: block;
+}
+
+/* line 16, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.search_sidebar select {
+  margin: 0;
+}
+
+/* line 20, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.custom_inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+
+/* line 26, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.custom_inline.half {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 32, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+  .custom_inline.half {
+    max-width: 48%;
+    width: 48%;
+  }
+  /* line 37, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+  .custom_inline.full {
+    width: 97.5%;
+  }
+}
+
+/* line 42, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.adv_filters_panel {
+  box-shadow: none;
+  padding: 0;
+}
+
+/* line 47, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.search_result {
+  position: relative;
+}
+
+/* line 51, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+ul.results_list {
+  list-style-type: none;
+}
+
+/* line 55, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+ul.results_list li {
+  padding: 10px;
+  background: #f6f6f6;
+}
+
+/* line 60, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+ul.results_list li.result:nth-child(odd) {
+  background: #eee;
+}
+
+/* line 64, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.result_photo img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 69, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.result_status {
+  position: absolute;
+  right: 14px;
+  top: 0;
+}
+
+/* line 75, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.label.green {
+  background: #57bb10;
+  font-weight: normal;
+  font-size: 10px;
+  padding: 3px 7px;
+}
+
+/* line 82, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.seller_label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+  color: #777;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+/* line 91, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.seller_label span {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* line 97, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.result_actions {
+  position: absolute;
+  bottom: 0;
+  right: 14px;
+}
+
+/* line 103, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.result_action_btn {
+  background: #86a8d0;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+
+/* line 111, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.result_action_btn:hover {
+  color: #fff;
+}
+
+/* line 115, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_search.scss */
+.result_action_btn.favorite {
+  background: #d63b96;
+}
+
+/*style for Settings page here*/
+/* line 3, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.container_body {
+  margin-top: 135px;
+}
+
+/* line 7, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.list-vertical {
+  display: inline-block;
+  color: #666;
+  text-align: left;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+/* line 16, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.fb {
+  color: royalblue;
+}
+
+/* line 20, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.goplus {
+  color: red;
+}
+
+/* line 24, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.save-button {
+  background-color: #D73B9F;
+  color: #FFFFFF;
+  border: #D73B9F;
+}
+
+/* line 30, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.support-button {
+  background-color: #9DC5ED;
+  color: #FFFFFF;
+  border: #9DC5ED;
+}
+
+/* line 36, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.fa-4 {
+  font-size: 66px;
+}
+
+/* line 40, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.updatetext {
+  font-size: 11px;
+}
+
+/* line 44, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.proptext {
+  font-size: 12px;
+}
+
+/* line 48, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.section-font {
+  color: #666666;
+}
+
+/* line 52, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.deskspacing {
+  margin-bottom: 15px;
+}
+
+/* line 56, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.sectionbottomspacing {
+  margin-bottom: 30px;
+}
+
+/* line 60, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.topmargin {
+  margin-top: 20px;
+}
+
+/* line 65, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.hr_horizontal {
+  width: 95%;
+  height: 1.5px;
+  background: #95989A;
+  text-align: left;
+}
+
+/* line 72, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.icon_margin_left {
+  margin-left: 20px;
+}
+
+/* line 76, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.h1_support_page_username {
+  color: #86A8D0;
+  margin: 0;
+  font-size: 32px;
+}
+
+/* line 82, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+h2.settings_nomargin {
+  margin-top: 0px;
+}
+
+/* line 86, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.credit-card-div span {
+  padding-top: 10px;
+}
+
+/* line 89, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.credit-card-div img {
+  padding-top: 30px;
+}
+
+/* line 92, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.credit-card-div .small-font {
+  font-size: 9px;
+}
+
+/* line 95, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.credit-card-div .pad-adjust {
+  padding-top: 10px;
+}
+
+/* line 99, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_settings.scss */
+.modal_background {
+  background-color: #EFEFEF;
+}
+
+/* line 1, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+h1.deal_title {
+  border-bottom: solid 2px #95989A;
+  display: inline-block;
+  padding: 0 30px 30px 30px;
+}
+
+/* line 7, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.chevronmessageing {
+  margin-top: 213px;
+  color: #AAA9A9;
+}
+
+/* line 13, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.propertyaddressfont {
+  font-size: 20px;
+  color: #9DC5ED;
+  font-weight: 700;
+}
+
+/* line 19, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.seller_img_deal {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border: solid 1px #ddd;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 29, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.seller_img_deal.chat_img {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 34, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.hr-dealdesk-vertical {
+  width: 100%;
+  height: 1.5px;
+  background: #95989A;
+  transform: rotate(90deg);
+}
+
+/* line 41, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.text-body {
+  margin-top: 15px;
+}
+
+/* line 45, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.usernametxtfont {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* line 50, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.icon_wrapper {
+  position: relative;
+}
+
+/* line 54, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.status_indicator {
+  width: 18px;
+  height: 18px;
+  background: #444;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}
+
+/* line 64, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.status_indicator.complete {
+  background: green;
+}
+
+/* line 68, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.status_indicator.incomplete {
+  background: red;
+}
+
+/* line 72, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.status_indicator.large {
+  width: 20px;
+  height: 20px;
+}
+
+/* line 77, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.fa-file-text-o.light {
+  color: #999;
+}
+
+/* line 81, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.contract_cheveron {
+  margin-top: 60px;
+  color: #AAA9A9;
+}
+
+/* line 86, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.contract_name {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* line 92, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.contract_status {
+  margin-top: 15px;
+}
+
+/* line 96, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.contract_cheveron_toggledropdown {
+  margin-left: 28px;
+  margin-top: 8px;
+  color: #AAA9A9;
+}
+
+/* line 102, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.contract_options_header {
+  border-bottom: solid 2px #95989A;
+  padding: 0 30px 15px 30px;
+}
+
+/* line 107, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+contract_cheveron_toggledropdown:hover {
+  color: deeppink;
+}
+
+/* line 111, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.contract_info {
+  margin-left: 28px;
+  margin-top: 4px;
+  color: #AAA9A9;
+}
+
+/* line 117, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+input[type="checkbox"] {
+  transform: scale(4, 4);
+  border: 1px solid;
+  border-radius: 1px;
+  border-color: #737373;
+}
+
+/* line 124, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.change_option {
+  height: 52px;
+}
+
+/* line 128, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.calendar_area {
+  background-color: #D73B9F;
+}
+
+/* line 133, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+h3.timeline {
+  margin-top: 12px;
+  font-size: 22px;
+  line-height: 18px;
+}
+
+/* line 139, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.timeline_titledate {
+  margin-top: 15px;
+}
+
+/* line 143, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.hr_timeline_line {
+  width: 10%;
+  height: 1.5px;
+  background: #95989A;
+  transform: rotate(90deg);
+  margin: 0 0 20px 195px;
+}
+
+/* line 151, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+h2.panel_date {
+  font-size: 28px;
+  padding: 0px;
+  color: #666;
+}
+
+/* line 158, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.timeline_check_past {
+  color: #D73B9F;
+}
+
+/* line 162, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/pages/_deal.scss */
+.timeline_check_future {
+  color: #666;
+}
+
+/* line 1, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-t {
+  margin-top: 20px;
+}
+
+/* line 4, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-t-sm {
+  margin-top: 10px;
+}
+
+/* line 7, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-t-md {
+  margin-top: 30px;
+}
+
+/* line 10, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-reset {
+  margin: 0;
+}
+
+/* line 14, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-b {
+  margin-bottom: 20px;
+}
+
+/* line 17, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-b-sm {
+  margin-bottom: 10px;
+}
+
+/* line 20, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+/* line 24, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-b {
+  margin-bottom: 20px;
+}
+
+/* line 28, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.m-tb {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 33, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.block {
+  display: block;
+}
+
+/* line 37, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.inline {
+  display: inline-block;
+}
+
+/* line 41, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.row_no_margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* line 46, C:/GIT_Boxlty/src/boxlty.Website/Style/scss/base/_helpers.scss */
+.no_padding {
+  padding: 0px 0px 0px 0px;
+}
+
+/*
+LAST MODIFIED:
+2016-08-29T19:21:40Z
+*/
+
+/*# sourceMappingURL=../public/main.map */

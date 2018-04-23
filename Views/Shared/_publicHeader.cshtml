@@ -1,0 +1,89 @@
+﻿<nav class="navbar navbar-fixed-top">
+    <div class="container">
+
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <a href="/"><img class="img-responsive" src="/img/logo.png" alt="boxlty logo" /></a>
+                </div>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse custom-nav">
+
+                    <div class="nav-account-links">
+                        @if (Request.IsAuthenticated)
+                        {
+                            <div class="dropdown inline">
+                                <button class="btn btn-custom dropdown-toggle user_dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <a class="toggle-login" href="#">
+                                        HELLO, @ViewBag.username
+                                        <span class="caret"></span>
+                                    </a>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="/Account/Settings">My Profile</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Saved Searches</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Saved Properties</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Viewed Properties</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Messages</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Action</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="/account/logoff">Log out</a></li> 
+                                </ul>
+                            </div>
+
+                        }
+                        else
+                        {
+                            <a class="header-link" href="/account/register">SIGNUP</a>
+                            <a class="header-link" href="/account/login">LOGIN</a>
+                        }
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/home/buy">buy</a></li>
+                        <li><a href="/home/sell">sell</a></li>
+                        <li><a href="/home/smartaccess">Smart Access</a></li>
+                        <li><a href="/home/whyboxlty">why boxlty</a></li>
+                        <li><a href="/home/faq">faqs</a></li>
+                        <li><a href="/home/support">support</a></li>
+                    </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>

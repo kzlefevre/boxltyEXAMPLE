@@ -1,0 +1,9 @@
+﻿<!-- snapi form coponent: simple validation summary (c)2009-2016 snapi llc -->
+
+@* NOTE - use requires bound viewmodel to have an attribute such as: errorlist : ko.ObservableArray()*@
+
+<div class="form-group clearfix">
+    <div class="alert alert-warning" style="display: none" data-bind="fade:errorlist().length,foreach:errorlist">
+        <i class="glyphicon glyphicon-warning-sign text-danger"></i> <span data-bind="html:mesg"></span><br />
+    </div>
+</div>

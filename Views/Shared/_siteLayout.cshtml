@@ -1,0 +1,78 @@
+﻿@using snapi.Core.Application
+@@using snapi.Core.Application
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>@ViewBag.Title | boxlty</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"/>
+
+    @RenderSection("layout_headMeta", required: false)
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+
+    @Styles.Render("~/content/vendor")
+    @Styles.Render("~/content/jquery")
+    @Styles.Render("~/content/site")
+
+
+    @Html.Partial("_RequireJS")
+    @Html.Partial("_SiteAnalytics")
+    @RenderSection("layout_headClose", required: false)
+</head>
+
+
+<body class="@Html.Raw(ViewBag.Vendor ? "" : "")">
+@*boxed-layout*@
+
+<div class="hidden-print">
+    @if (Request.IsAuthenticated){
+        if (ViewBag.Admin){
+            @Html.Partial("_adminHeader")
+        } else if (ViewBag.Manager){
+            @Html.Partial("_ManagerHeader")
+        } else if (ViewBag.Vendor){
+            @Html.Partial("_VendorHeader")
+        } else if (ViewBag.Worker){
+            @Html.Partial("_WorkerHeader")
+        }
+    } else{
+        @Html.Partial("_SiteHeader")
+    }
+
+
+</div>
+
+<div id="main">
+    <div class="hidden-print">
+        @if ((bool) ViewBag.Admin){
+            @Html.Partial("_adminSidebar")
+        } else if ((bool) ViewBag.Manager){
+            @Html.Partial("_ManagerSidebar")
+        } else{
+            @Html.Partial("_VendorSidebar")
+        }
+    </div>
+    @RenderBody()
+
+</div>
+
+
+<input type="hidden" id="h_ip" value="@Request.UserHostAddress"/>
+<input type="hidden" id="h_ng" value="@Guid.NewGuid().ToString()"/>
+<input type="hidden" id="h_bn" value="@CFG.Site.Version"/>
+<input type="hidden" id="h_vk" value="@CFG.Site.VersionKey"/>
+<input type="hidden" id="h_ik" value="@CFG.Site.InstanceKey"/>
+<input type="hidden" id="h_ul" value="@CFG.Site.BaseUrl"/>
+<input type="hidden" id="h_bk" value="@CFG.Site.BuildKey"/>
+
+<input type="hidden" id="h_id" value="@TempData["id"]"/>
+
+
+@RenderSection("layout_bodyClose", required: false)
+</body>
+</html>

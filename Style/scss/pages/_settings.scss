@@ -1,0 +1,101 @@
+/*style for Settings page here*/
+
+.container_body{
+    margin-top: 135px;
+}
+
+.list-vertical{
+  display: inline-block;
+  color: #666;
+  text-align: left;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.fb{
+    color: royalblue;
+}
+
+.goplus{
+    color:red;
+}
+
+.save-button{
+    background-color: #D73B9F;
+    color: #FFFFFF;
+    border: #D73B9F;
+}
+
+.support-button{
+    background-color: #9DC5ED;
+    color: #FFFFFF;
+    border: #9DC5ED;
+}
+
+.fa-4{
+    font-size: 66px;
+}
+
+.updatetext{
+    font-size: 11px;
+}
+
+.proptext{
+    font-size: 12px;
+}
+
+.section-font{
+    color: #666666;
+}
+
+.deskspacing{
+    margin-bottom: 15px;
+}
+
+.sectionbottomspacing{
+    margin-bottom: 30px;
+}
+
+.topmargin{
+    margin-top: 20px;
+}
+
+
+.hr_horizontal {
+    width: 95%; 
+    height: 1.5px; 
+    background: #95989A; 
+    text-align:left;
+}
+
+.icon_margin_left {
+    margin-left: 20px;
+}
+
+.h1_support_page_username {
+    color:#86A8D0;
+    margin:0;
+    font-size:32px;
+}
+
+h2.settings_nomargin {
+    margin-top: 0px;
+}
+
+.credit-card-div  span {
+    padding-top:10px;
+        }
+.credit-card-div img {
+    padding-top:30px;
+}
+.credit-card-div .small-font {
+    font-size:9px;
+}
+.credit-card-div .pad-adjust {
+    padding-top:10px;
+}
+
+.modal_background {
+    background-color: #EFEFEF;
+}

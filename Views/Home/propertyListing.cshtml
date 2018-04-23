@@ -1,0 +1,430 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_publicLayout.cshtml";
+}
+<div class="hero-unit home">
+    <div class="container hero">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-content">
+                    <h1 class="your-move">Make Your Move</h1>
+                    <h2 class="sub">Buy, Sell, search and gain instant access to properties worldwide.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row home-search spacer center">
+            <div class="col-md-12">
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search by Neighborhood, Address, City, School" aria-describedby="basic-addon2">
+                    <a href="#" class="btn btn-search">search</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="property-listing">
+    <div class="container">
+        <div class="row spacer">
+            <div class="col-md-12">
+                <h1>Property Listings</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ROW 1 -->
+
+<section class="property-listings bg spacer-large">
+    <div class="container">
+        <div class="row spacer">
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-1.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-2.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-3.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ROW 2 -->
+<section class="property-listings">
+    <div class="container">
+        <div class="row spacer">
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-1.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-2.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-3.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ROW 3 -->
+<section class="property-listings bg">
+    <div class="container">
+        <div class="row spacer">
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-1.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-2.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-3.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ROW 4 -->
+<section class="property-listings">
+    <div class="container">
+        <div class="row spacer">
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-1.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-2.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-3.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ROW 5 -->
+<section class="property-listings bg">
+    <div class="container">
+        <div class="row spacer">
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-1.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-2.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="listing-box">
+                    <img src="/img/house-3.png" alt="Featured Listing" />
+                    <div class="listing-box-left">
+                        <h2>$1,500,000</h2>
+                        <div class="address">
+                            <h3>1322 Main Street</h3>
+                            <h3>Newark, NJ</h3>
+                        </div>
+                    </div>
+                    <div class="listing-box-right">
+                        <div class="listing-details">
+                            <div class="listing-details-content">
+                                <i class="fa fa-bed icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">5</span>
+                            </div>
+                            <div class="listing-details-content">
+                                <i class="fa fa-bath icon-pink icon-fix" aria-hidden="true"></i>
+                                <span class="icon-fix">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

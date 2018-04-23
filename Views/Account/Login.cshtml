@@ -1,0 +1,162 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_tinyLayout.cshtml";
+}
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+            @Html.Partial("~/Views/Shared/_tinyHeader.cshtml")
+        </div>
+        <div class="row">
+            <div class="panel">
+
+
+                @if ((bool) ViewBag.Online){
+                    <form id="f_login" method="POST" data-bind="submit: submit">
+                        @Html.AntiForgeryToken()
+                        <input name="h_word" type="hidden" data-bind="value: sha1()"/>
+
+                        <input name="h_inst" type="hidden" value="@TempData["inst"]"/>
+                        <input id="h_code" name="h_code" type="hidden" value="@TempData["code"]"/>
+                        <input id="h_comp" type="hidden" value="@TempData["comp"]"/>
+
+                        <div class="panel-body">
+                            <div class="form-group login">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" name="t_emal" class="form-control" maxlength="256" autocomplete="off" placeholder="Email Address" data-bind="value: email, validationElement: email" required/>
+                                </div>
+                            </div>
+                            <div class="form-group resend login">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
+                                    <input type="password" class="form-control" maxlength="16" autocomplete="off" placeholder="Password" data-bind="value: word1, validationElement: word1" required/>
+                                </div>
+                            </div>
+                            <div id="x_login" class="alert alert-warning login-alert" style="display: none;">
+                                <b>Please</b> fill in all required fields.
+                            </div>
+                            <div id="x_login_invalid" class="alert alert-warning login-alert" style="display: none;">
+                                <b>Invalid</b> username or password.
+                            </div>
+                            <div id="x_login_email" class="alert alert-info login-email" style="display: none;"></div>
+                            <div class="form-group resend text-center" style="display: none">
+                                <button type="button" class="btn btn-primary" data-bind="click: resend">
+                                    Resend Invitation <i class="glyphicon glyphicon-send"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="panel-title-sm pull-left" style="padding-top: 7px;">
+                                    
+                                    <a href="/Account/Help/@TempData["code"]">Username / Password Help</a><br/>
+                         
+                                    <a href="/Home/Contact/@TempData["code"]">Contact support</a>
+                                 
+                                </span>
+                            <div class="form-group margin-bottom-none">
+                                <button class="btn-pink pull-right" type="submit">Submit</button>
+                                <a class="pull-right btn btn-default login-email" style="display: none" href="/Home/Contact/@TempData["code"]">Contact support</a>
+                                <div class="clearfix"></div>
+
+                                @if (ViewBag.Debug){
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="panel-alt">
+                                                <br/>
+                                                <label>Testing Options</label>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td>
+                                                            <button type="button" class="btn btn-default" data-bind="click: loginas" data-pass="123456Zx" data-user="admin@snapisoft.com">
+                                                            <i class="fa fa-wrench"></i> Login As Admin
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-default" data-bind="click: loginas" data-pass="123456Zx" data-user="dt@snapisoft.com">
+                                                            <i class="fa fa-user text-blue"></i> Login As Daniel
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-default" data-bind="click: loginas" data-pass="123456Zx" data-user="dt@snapisoft.com">
+                                                                <i class="fa fa-user text-blue"></i> Login As Daniel
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+                        </div>
+
+                    </form>
+                } else{
+                    <div class="padding-lg">
+                        <div class="alert alert-warning">
+                            The @TempData["name"] boxlty website is <b>offline</b>.
+                        </div>
+                        <hr/>
+
+                        <p>
+                            <a class="pull-left btn btn-default" href="/@TempData["code"]?refresh=1">Refresh Page</a>
+                            <a class="pull-right btn btn-default" href="/Home/Contact/@TempData["code"]">Contact support</a>
+                        </p>
+                        <br/>
+                        <br/>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@*@if ((string) TempData["code"] == "core"){
+    if ((bool) ViewBag.HasCompanies){
+        <footer class="idx-footer hidden">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Worker Portal Access</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var v in ViewBag.Companies.list){
+                    if ((int) v.status.hold == 0){
+                        <tr>
+                            <td class="text-center">
+                                <a href="/@Html.Raw((string) v.url)" title="@Html.Raw((string) v.name) boxlty login">
+
+
+                                    @if (!string.IsNullOrEmpty((string) v.icon)){
+                                        <img src="/images/@Html.Raw((string) v.code)/@Html.Raw((string) v.icon)/125/40" width="125" height="40" alt="avatar"/>
+                                    } else{
+                                        <img src="/img/logos/logo-large.png" width="125" height="45"/>
+                                    }
+
+                                </a>
+                            </td>
+                            <td class="padding-top-lg">
+                                <a href="/@Html.Raw((string) v.url)" title="@Html.Raw((string) v.name) boxlty login">
+
+                                    <b class="">@Html.Raw((string) v.name)</b>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+
+        </footer>
+    }
+} else{
+}*@

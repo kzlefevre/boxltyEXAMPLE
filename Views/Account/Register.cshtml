@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Register Account";
+    Layout = "~/Views/Shared/_tinyLayout.cshtml";
+}
+
+<div id="main">
+    <div class="container">
+       <div class="row">
+            @Html.Partial("~/Views/Shared/_tinyHeader.cshtml")
+        </div>
+        <div class="row">
+            <div class="panel">
+                <form id="f_reguser" method="POST" data-bind="submit: submit" enctype="multipart/form-data" novalidate="">
+                    <input type="hidden" name="h_type" value="user"/>
+                    <div class="p_econ">
+                        @Html.AntiForgeryToken()
+                        <input name="h_word" type="hidden" data-bind="value: sha1()"/>
+                        <div class="panel-body">
+                            @*<div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="">@@</span> </span>
+                                    <input type="text" name="t_nickname" tabindex="1" class="form-control" maxlength="32" autocomplete="off" placeholder="User Name" required data-bind="value: name, validationElement: name"/>
+                                </div>
+                            </div>*@
+
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+                                        <input type="text" name="t_namefrst" tabindex="2" class="form-control" maxlength="32" autocomplete="off" placeholder="First Name" required data-bind="value: namefrst, validationElement: namefrst" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+                                        <input type="text" name="t_namelast" tabindex="1" class="form-control" maxlength="32" autocomplete="off" placeholder="Last Name" required data-bind="value: namelast, validationElement: namelast" />
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicons glyphicons-e-mail"></span> </span>
+                                        <input type="email" name="t_emal" tabindex="3" class="form-control" maxlength="256" autocomplete="off" placeholder="Email Address" required data-bind="value: emal, validationElement: emal" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicons glyphicons-keys"></span> </span>
+                                        <input id="t_word" type="password" tabindex="4" class="form-control" maxlength="16" autocomplete="off" placeholder="Create Password" required data-bind="value: word1, validationElement: word1"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicons glyphicons-keys"></span> </span>
+                                        <input type="password" class="form-control" tabindex="5" maxlength="16" autocomplete="off" placeholder="Confirm Password" required data-bind="value: word2, validationElement: word2"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12" data-bind="foreach:listerror">
+                                    <div class="alert alert-sm alert-warning">
+                                        <i class="fa fa-warning text-red"></i> <span data-bind="html:$data"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="panel-footer p_econ">
+                        <div class="form-group margin-bottom-none">
+
+                            <button class="btn btn-pink pull-right margin-top" type="submit">Continue</button>
+                            <div>
+                                Please enter your Information <br/>Create your
+                                <u title="Password must be 8-16 characters, with at least one capital and one lowercase letter, and one number.">account password</u><br/> Then press continue
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="text-center padding-top">
+                <h6 class="text-muted padding-bottom">@TempData["name"]</h6>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+
+    var page = (string) TempData["page"];
+    var id = (string) TempData["id"];
+}
+
+<header class="navbar navbar-fixed-top">
+
+    @Html.Partial("~/Views/Shared/_headerSearch.cshtml")
+
+    <div class="pull-right header-btns">
+
+        <div class="btn-group user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-truck"></span> @ViewBag.username
+            </a>
+            <button type="button" class="btn btn-default btn-gradient btn-sm dropdown-toggle padding-none" data-toggle="dropdown">
+
+            </button>
+            <ul class="dropdown-menu checkbox-persist" role="menu">
+                <li class="menu-arrow">
+                <div class="menu-arrow-up"></div>
+                </li>
+                <li class="dropdown-header">Your Account <span class="pull-right glyphicons glyphicons-user"></span></li>
+                <li>
+                <ul class="dropdown-items">
+
+
+                    <li class="@Html.Raw(page == "shipments" ? "active" : "")"><a href="/Manager/Shipments"><span class="glyphicon glyphicon-send margin-right"></span><span>Shipments</span></a>
+                    <li class="@Html.Raw(page == "quotes" ? "active" : "")"><a href="/Manager/Quotes"><span class="glyphicons glyphicons-quora margin-right"></span><span>Quotes</span></a>
+
+
+                    <li class="@Html.Raw(page == "Schedule" ? "active" : "")"><a href="/Account?id=Manager"><span class="fa fa-credit-card margin-right"></span><span> Account</span></a>
+                    <li class="@Html.Raw(page == "Schedule" ? "active" : "")"><a href="/Manager/Schedule"><span class="fa fa-glass margin-right"></span><span> Schedule</span></a>
+
+
+                    <li class="@Html.Raw(page == "traklog" ? "active" : "")"><a href="/Manager/TrakLog"><span class="glyphicon glyphicon-list margin-right"></span><span> Tracking Log</span></a>
+                    <li class="@Html.Raw(page == "systemlog" ? "active" : "")"><a href="/Manager/SystemLog"><span class="glyphicon glyphicon-list margin-right"></span><span> System Log</span></a>
+
+
+                    <li class="padding-none clearfix">
+                    <div class="dropdown-lockout">
+                        <a href="/account/Password"><i class="glyphicons glyphicons-keys"></i> Change Password</a>
+                    </div>
+                    <div class="dropdown-signout">
+                        <a href="/Exit?nxt=@TempData["usercode"]"><i class="fa fa-sign-out"></i> Sign Out</a>
+                    </div>
+                    </li>
+
+
+                </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header>

@@ -1,0 +1,44 @@
+﻿@using snapi.Core.Application
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>@ViewBag.Title | boxlty</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"/>
+    @RenderSection("layout_headMeta", required: false)
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+
+    @Styles.Render("~/content/vendor")
+    @Styles.Render("~/content/jquery")
+    @Styles.Render("~/content/site")
+
+
+    @Html.Partial("~/Views/Shared/_RequireJS.cshtml")
+    @Html.Partial("~/Views/Shared/_SiteAnalytics.cshtml")
+    @RenderSection("layout_headClose", required: false)
+</head>
+
+
+<body class="@Html.Raw((string) TempData["page"] == "error" ? "minimal error-page" : "login-page") ">
+
+
+@RenderBody()
+
+<input type="hidden" id="h_ip" value="@Request.UserHostAddress"/>
+<input type="hidden" id="h_ng" value="@Guid.NewGuid().ToString()"/>
+<input type="hidden" id="h_bn" value="@CFG.Site.Version"/>
+<input type="hidden" id="h_vk" value="@CFG.Site.VersionKey"/>
+<input type="hidden" id="h_ik" value="@CFG.Site.InstanceKey"/>
+<input type="hidden" id="h_ul" value="@CFG.Site.BaseUrl"/>
+<input type="hidden" id="h_bk" value="@CFG.Site.BuildKey"/>
+<input type="hidden" id="h_id" value="@TempData["id"]"/>
+<input type="hidden" id="h_inst" value="@TempData["inst"]"/>
+
+@RenderSection("layout_bodyClose", required: false)
+</body>
+</html>

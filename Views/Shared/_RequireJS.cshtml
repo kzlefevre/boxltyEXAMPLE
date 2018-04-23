@@ -1,0 +1,10 @@
+﻿@using snapi.Core.Data
+@Scripts.Render("~/bundles/require.js")
+<script>
+    requirejs.config({
+        locale: '@ViewContext.Locale()'
+    });
+    require(['@ViewContext.InjectDebugExtension("/App/main.js")'], function() {
+        require(['bootstrap', 'modernizr', '@ViewContext.WorkerPath()']);
+    });
+</script>

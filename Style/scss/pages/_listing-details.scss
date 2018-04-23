@@ -1,0 +1,176 @@
+section.account_subnav {
+    padding-top:168px;
+}
+
+.subnav_left {
+    float:left;
+}
+
+.subnav_right {
+    float:right;
+}
+.nav_subnav > li > a {
+    color:$text-medium;
+}
+
+.nav_subnav > li > a:hover,
+.nav_subnav > li > a:focus,
+.nav_subnav .open > a, 
+.nav_subnav .open > a:hover, 
+.nav_subnav .open > a:focus  {
+    border-bottom:none;
+    background-color:transparent;
+}
+
+.dropdown-menu.nav_subnav {
+    box-shadow:none;
+    border:none;
+    background:transparent;
+}
+
+section#listing > section {
+    padding:30px 0;
+}
+
+.header_details_left {
+    float:left;
+}
+
+h1.header_address {
+    color:#86A8D0;
+    margin:0;
+    font-size:42px;
+}
+
+h1.header_address.medium {
+    font-size:26px;
+}
+
+.header_sub_details {
+    font-size:20px;
+    color:#666;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.header_sub_details.small {
+    font-size:14px;
+}
+
+.header_mortgage {
+    font-size:12px;
+    color:#aaa;
+    font-weight:normal;
+}
+
+.header_details_right {
+    float:right;
+    font-size:12px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.listing_status {
+    color:#86A8D0;
+    font-size:14px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+section#listing_photos {
+    padding-bottom:0 !important;
+}
+
+.listing_main_photo img {
+    width:100%;
+    max-width:500px;
+}
+
+.listing_thumbs {
+    margin:15px 0;
+}
+
+.listing_thumbs > img {
+    width:100%;
+}
+
+#listing_overview p {
+    margin:0;
+}
+
+section#listing_details {
+    background:#EFEFEF;
+}
+
+h1.listing_sect_h1 {
+    font-size:22px;
+    text-transform:uppercase;
+    color:#999;
+    margin:0 0 20px 0;
+    font-weight:normal;
+}
+
+h2.listing_sub_h2 {
+    font-size:18px;
+    margin:0 0 15px 0;
+    text-transform:uppercase;
+    color:#999;
+    font-weight:normal;
+}
+
+ul.details_list {
+    list-style-type:disc;
+    margin:0;
+    padding:0 0 0 20px;
+}
+
+ul.details_list li {
+    margin:5px 0;
+}
+
+ul.details_list.result {
+    font-size:13px;
+    margin:10px 0;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:5px;
+}
+
+ul.details_list.result > li {
+    margin:0;
+    padding:0;
+    color:#777;
+    background:transparent;
+}
+
+.contact_seller_wrap {
+    text-align:center;
+    margin:0 auto;
+}
+
+.seller_img {
+    border-radius:50%;
+    width:150px;
+    height:150px;
+    overflow:hidden;
+    border:solid 1px #ddd;
+}
+
+.seller_img img {
+    width:120%;
+}
+
+.seller_img.small {
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    overflow:hidden;
+    border:solid 1px #ddd;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.seller_img.small img {
+    width:120%;
+}

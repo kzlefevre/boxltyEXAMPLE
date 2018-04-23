@@ -1,0 +1,239 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Property Search";
+    Layout = "~/Views/Shared/_publicLayout.cshtml";
+}
+
+<div id="q_wrap" class="container container_body spacer-large">
+    @*<section class="account_subnav">
+            <div class="container">
+                <div class="row">
+                        <div class="subnav_left">
+                            <ul class="nav nav-pills nav_subnav">
+                                <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Saved Searches <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        test
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Saved Properties <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        test
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Previously Viewed Properties <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        test
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="subnav_right">
+                            <ul class="nav nav-pills nav_subnav">
+                                <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Messages <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav_subnav">
+                                        test
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </section>*@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <section class="search_sidebar">
+                    <form>
+                        <div class="form-group">
+                            <label for="">Location</label>
+                            <input type="text" id="" class="form-control custom_inline full" placeholder="Address, City, Zip" data-bind="value: location">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Price Range</label>
+                            <input type="text" id="" class="form-control custom_inline half" placeholder="Price Low">
+                            <input type="text" id="" class="form-control custom_inline half" placeholder="Price High" data-bind="value: pricehigh">
+                        </div>
+                        <div class="form-group">
+                            <div class="custom_inline half">
+                                <label for="">Beds</label>
+                                <select id="" class="form-control" data-bind="value: beds">
+                                    <option>1+</option>
+                                </select>
+                            </div>
+                            <div class="custom_inline half">
+                                <label for="">Baths</label>
+                                <select id="" class="form-control" data-bind="value: baths">
+                                    <option>1+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">House Size</label>
+                            <input type="text" id="" class="form-control custom_inline half" placeholder="SqFt Low">
+                            <input type="text" id="" class="form-control custom_inline half" placeholder="SqFt High" data-bind="value: sqfthigh">
+                        </div>
+                        @*<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion_nav">More Filters <i class="fa fa-caret-down" aria-hidden="true"></i></a>*@
+
+                        <div class="panels">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel adv_filters_panel">
+                                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body ">
+                                            <section class="panel_section">
+                                                <p>
+                                                    Alignment and patience are central to each of our partnerships. Given the nature of our capital base, we are flexible with regard to
+                                                    investment amounts, ownership requirements and time horizon.
+                                                </p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <a href="#" class="btn btn-blue btn-sm" data-bind="click: search">Search</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="col-md-9">
+                <section class="search_results" data-bind="foreach: list">
+                    <ul class="results_list">
+                        <li class="result">
+                            <div class="search_result">
+                                @*<table width="500" border="1" cellpadding="5">
+                                        <tbody data-bind="foreach: list">
+
+                                            <tr>
+                                                <td>
+                                                    <img data-bind="attr: {src: images}" width="300"/>
+                                                </td>
+                                                <td>
+                                                    <h1 class="header_address medium" data-bind="html: address.deliveryLine"></h1>
+                                                </td>
+                                                <td data-bind="html: address.city">
+                                                <td data-bind="html: address.state">
+                                                <td data-bind="html: address.zip">
+                                                <td data-bind="html: listPrice">
+                                                <td data-bind="html: beds">
+                                                <td data-bind="html: baths.total">
+                                                <td data-bind="html: $data.size ? size : ''">
+                                                <td data-bind="html: $data.lotSize ? lotSize.sqft : ''"></td>
+                                                <td data-bind="html: propertyType">
+                                                <td data-bind="html: $data.yearBuilt ? yearBuilt : ''">
+                                                <td data-bind="html: listingAgent.name">
+                                            </tr>
+
+                                        </tbody>
+                                    </table>*@
+                                <div class="row">
+                                    <div class="col-md-5 result_photo">
+                                        <img data-bind="attr: {src: images}" />
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="label green result_status">NEW!</div>
+                                        <h1 class="header_address medium" data-bind="html: address.deliveryLine">327 E. MAPLE ST, YORK, PA 17403</h1>
+                                        <div class="header_sub_details small">
+                                            <span data-bind="html: '$'+listPrice">$255,000</span><span class="header_mortgage">/ Est $989 /MO</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span data-bind="html: beds + ' Bed'">3 Bed</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span data-bind="html: baths.total + ' Bath'">2 Bath</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span data-bind="html: $data.size ? size + ' sq. ft.' : 'NO DATA'">1800 sq. ft.</span>
+                                        </div>
+                                        <div class="result_details">
+                                            <ul class="details_list result">
+                                                <li data-bind="html: $data.lotSize ? lotSize.sqft +' SQFT' : 'NO DATA'">Lot: 3,245 SQFT</li>
+                                                <li data-bind="html: propertyType">Single Family Home</li>
+                                                <li data-bind="html: $data.yearBuilt ? 'Built in '+yearBuilt : 'NO DATA'">Built in 1942</li>
+                                            </ul>
+                                            <ul class="details_list result">
+                                                <li data-bind="html: $data.lotSize ? lotSize.sqft +' SQFT' : 'NO DATA'">Lot: 3,245 SQFT</li>
+                                                <li data-bind="html: propertyType">Single Family Home</li>
+                                                <li data-bind="html: $data.yearBuilt ? 'Built in '+yearBuilt : 'NO DATA'">Built in 1942</li>
+                                            </ul>
+                                        </div>
+                                        <div class="result_seller">
+                                            <div class="seller_img small">
+                                                <img src="/img/lease-sm.png">
+                                            </div>
+                                            <div class="seller_label">Seller<br /><span data-bind="html: listingAgent.name">John Smith</span></div>
+                                        </div>
+                                        <div class="result_actions">
+                                            <a id="viewID" class="btn result_action_btn view" data-bind="attr: {href: '/listing/details?homeid='+id}">View</a>
+                                            <a href="#" class="btn result_action_btn favorite"><i class="fa fa-heart" aria-hidden="true"></i> Favorite</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        @*<li class="result">
+                                <div class="search_result">
+                                    <div class="row">
+                                        <div class="col-md-5 result_photo">
+                                            <img src="~/img/house-3.png" />
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="label green result_status">NEW!</div>
+                                            <h1 class="header_address medium">327 E. MAPLE ST, YORK, PA 17403</h1>
+                                            <div class="header_sub_details small">
+                                                <span>$255,000</span><span class="header_mortgage">/ Est $989 /MO</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>3 Bed</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>2 Bath</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>1800 sq. ft.</span>
+                                            </div>
+                                            <div class="result_details">
+                                                <ul class="details_list result">
+                                                    <li>Lot: 3,245 SQFT</li>
+                                                    <li>Single Family Home</li>
+                                                    <li>Built in 1942</li>
+                                                </ul>
+                                                <ul class="details_list result">
+                                                    <li>Lot: 3,245 SQFT</li>
+                                                    <li>Single Family Home</li>
+                                                    <li>Built in 1942</li>
+                                                </ul>
+                                            </div>
+                                            <div class="result_seller">
+                                                <div class="seller_img small">
+                                                    <img src="/img/lease-sm.png">
+                                                </div>
+                                                <div class="seller_label">Seller<br /><span>John Smith</span></div>
+                                            </div>
+                                            <div class="result_actions">
+                                                <a href="#" class="btn result_action_btn view">View</a>
+                                                <a href="#" class="btn result_action_btn favorite"><i class="fa fa-heart" aria-hidden="true"></i> Favorite</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>*@
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    @*Save & Help section*@
+    <section class="bg spacer section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 spacer-large">
+
+                </div>
+                <div class="col-md-6 spacer-large">
+                    <div class="text-center pull-right">
+                        Need Help?<br />
+                        <a href="~/account/Help" class="btn btn-md btn-blue spacer">Support Center</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

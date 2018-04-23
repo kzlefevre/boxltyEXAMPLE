@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+
+    var page = (string) TempData["page"];
+    var id = (string) TempData["id"];
+}
+<aside id="sidebar" class="special-sidebar">
+    <div id="sidebar-search">
+        <a href="/Manager/Dashboard"><h6 class="pull-left margin-left-neg margin-top-sm @Html.Raw(page == "dashboard" ? "text-danger" : "text-primary")"><span class="glyphicons glyphicons-charts margin-right"></span> Manager <span class="hidden-sm hidden-xs">dashboard</span></h6></a>
+    </div>
+    <div id="sidebar-menu">
+        <ul class="nav sidebar-nav">
+            <li>
+            <a class="accordion-toggle menu-open"><span class="glyphicons glyphicons-building"></span><span class="sidebar-title">Parcel Managment</span></a>
+            <ul class="nav sub-nav">
+
+                <li class="@Html.Raw(page == "shipments" ? "active" : "")"><a href="/Manager/Shipments"><span class="glyphicon glyphicon-send margin-right"></span><span>Jobs &amp; Shipments</span></a>
+                <li class="@Html.Raw(page == "quotes" ? "active" : "")"><a href="/Manager/Quotes"><span class="glyphicons glyphicons-quora margin-right"></span><span>Quotes</span></a>
+
+            </ul>
+            </li>
+
+            <li>
+            <a class="accordion-toggle menu-open"><span class="glyphicons glyphicons-settings"></span><span class="sidebar-title">Settings</span></a>
+            <ul class="nav sub-nav">
+
+                <li class="@Html.Raw(page == "account" ? "active" : "")"><a href="/Account?id=Manager"><span class="fa fa-credit-card margin-right"></span><span> Account</span></a>
+                <li class="@Html.Raw(page == "Schedule" ? "active" : "")"><a href="/Manager/Schedule"><span class="fa fa-glass margin-right"></span><span> Schedule</span></a>
+
+
+            </ul>
+            </li>
+            <li>
+            <a class="accordion-toggle menu-open"><span class="glyphicons glyphicons-lightbulb"></span><span class="sidebar-title">Tracking</span></a>
+            <ul class="nav sub-nav">
+
+
+                <li class="@Html.Raw(page == "traklog" ? "active" : "")"><a href="/Manager/TrakLog"><span class="glyphicon glyphicon-list margin-right"></span><span> Tracking Log</span></a>
+                <li class="@Html.Raw(page == "systemlog" ? "active" : "")"><a href="/Manager/SystemLog"><span class="glyphicon glyphicon-list margin-right"></span><span> System Log</span></a>
+
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <br/>
+
+</aside>

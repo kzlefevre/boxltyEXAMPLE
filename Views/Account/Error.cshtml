@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = TempData["name"] + " Error";
+    Layout = "~/Views/Shared/_tinyLayout.cshtml";
+}
+
+<script language="javascript" type="text/javascript">
+    function closeWindow() {
+        window.open('', '_parent', '');
+        window.close();
+    }
+</script>
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <a id="return-arrow" href="JavaScript:closeWindow()" onclick="self.close()"> <i class="fa fa-times-circle-o fa-3x text-red2"></i> <span class="margin-top-sm"><b> Please Close this Window </b></span> </a>
+
+            </div>
+            <div class="col-md-6">
+                <p class="text-muted text-sm pull-right">
+                    The close function might be disabled by your browser<br/> you can close the browser by pressing the top corner X<br/> or going to File &rArr; Quit.
+                </p>
+            </div>
+
+
+        </div>
+        <div id="error-container" class="row">
+
+            <div class="col-md-10 col-lg-7 center-column text-center">
+                <span class="error-text fadeIn animated">4</span>
+                <div class="error-icon inline-object"><span class="fadeIn animated fa fa-circle-o"></span></div>
+                <span class="error-text fadeIn animated">@TempData["numb"]</span>
+                <p class="lead top-lg text-center fadeIn animated">@TempData["note"]</p>
+                <div class="col-md-6 col-md-offset-3">
+                    <hr/><b class="alert alert-info">Please contact the System Administrator</b>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

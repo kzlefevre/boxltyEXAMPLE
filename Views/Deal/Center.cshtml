@@ -1,0 +1,499 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Deal Center";
+    Layout = "~/Views/Shared/_publicLayout.cshtml";
+}
+
+
+@*Page title *@
+<div class="container container_body spacer-large">
+    <div class="row">
+        <div class="col-md-12 text-center spacer">
+            <h1 class="text-uppercase section-font deal_title">Deal Desk</h1>
+        </div>
+    </div>
+</div>
+
+@*Messageing Section*@
+<section class="section-padding">
+    <div class="container">
+
+        <div class="row section-font">
+            <h2 class="section-font col-md-12 text-center">Messaging</h2>
+        </div>
+
+        <div class="container spacer-large">
+            <div class="row">
+
+                <div class="col-md-3 spacer-large">
+                    <div class="text-center usernametxtfont">
+                        Seller
+                    </div>
+                    <div class="seller_img_deal text-center spacer">
+                        <img src="http://placehold.it/150x150" class="img-circle">
+                    </div>
+                    <div class="text-center spacer">
+                        (ViewBag.username.Seller)
+                    </div>
+                </div>
+
+                <div class="col-md-1 text-centerc spacer">
+                    <i class="fa fa-chevron-left fa-3x chevronmessageing" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="propertyaddressfont text-center">
+                        (property address)
+                    </div>
+                    
+                    <div class="listing_main_photo text-center spacer">
+                        <img src="~/img/temp/listing_img.jpg" />
+                    </div>
+                </div>
+
+                <div class="col-md-1 text-center spacer">
+                    <i class="fa fa-chevron-left fa-3x chevronmessageing" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-3 spacer-large">
+                    <div class="text-center usernametxtfont">
+                        Buyer
+                    </div>
+                    <div class="seller_img_deal text-center spacer">
+                        <img src="http://placehold.it/150x150" class="img-circle">
+                    </div>
+                    <div class="text-center spacer">
+                        (ViewBag.username.Buyer)
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container spacer">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="form-group text-center">
+                        <textarea class="form-control" rows="7" placeholder="type your message here to the buyer..." id="comment"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn-lg result_action_btn text">
+                            Send
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-1 text-center spacer">
+                    <hr class="hr-dealdesk-vertical">
+                </div>
+
+                @*messaging template here*@
+                <div class="col-md-4">
+
+                    @*Seller side chatbox template*@
+                    <div class="spacer">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="seller_img_deal.chat_img pull-left">
+                                    <img src="http://placehold.it/50x50" class="img-circle">
+                                </div>
+                            </div>
+                            <div class="col-md-10 pull-left">
+                                <div class="usernametxtfont">
+                                    VeiwBag.username.Seller
+                                </div>
+                                <div class="text-body text-left spacer">
+                                    <div>
+                                        Hello! I see that you are interested in looking at my property!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Buyer side chatbox template*@
+                    <div class="spacer">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="usernametxtfont text-right">
+                                    VeiwBag.username.Buyer
+                                </div>
+                                <div class="text-body text-right spacer">
+                                    <div>
+                                        Hello there, I'd like to come and view your property, what is the next step?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="seller_img_deal.chat_img">
+                                    <img src="http://placehold.it/50x50" class="img-circle pull-right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-1 text-center spacer">
+                    <hr class="hr-dealdesk-vertical">
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group text-center">
+                        <textarea class="form-control" rows="7" placeholder="type your message here to the seller..." id="comment"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn-lg result_action_btn">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            Send
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>
+
+@*Contracts Section*@
+<section class="bg section-padding">
+    <div class="container">
+
+        <div class="row section-font">
+            <h2 class="section-font col-md-12 text-center">Contract Negotiations</h2>
+        </div>
+
+        <div class="row spacer-large">
+
+
+            <div class="col-md-1">
+                <a><i class="fa fa-chevron-left fa-2x contract_cheveron" aria-hidden="true"></i></a>
+            </div>
+
+            @*Contrats start here*@
+            <div class="col-md-2">
+                <div class="contract_name">
+                    Contract Name
+                </div>
+                <div class="icon_wrapper">
+                    <a><i class="fa fa-file-text-o fa-5x light contract_icon"></i></a>
+                    <div class="status_indicator incomplete"></div>
+                    <div class="contract_status">
+                        Incomplete
+                    </div>
+                    <a><i class="fa fa-chevron-up contract_cheveron_toggledropdown" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="contract_name">
+                    Contract Name
+                </div>
+                <div class="icon_wrapper">
+                    <a><i class="fa fa-file-text-o fa-5x light contract_icon"></i></a>
+                    <div class="status_indicator incomplete"></div>
+                    <div class="contract_status">
+                        Incomplete
+                    </div>
+                    <a><i class="fa fa-chevron-down contract_cheveron_toggledropdown" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="contract_name">
+                    Contract Name
+                </div>
+                <div class="icon_wrapper">
+                    <a><i class="fa fa-file-text-o fa-5x light contract_icon"></i></a>
+                        <div class="status_indicator incomplete"></div>
+                        <div class="contract_status">
+                            Incomplete
+                        </div>
+                        <a><i class="fa fa-chevron-down contract_cheveron_toggledropdown" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="contract_name">
+                    Contract Name
+                </div>
+                <div class="icon_wrapper">
+                    <a><i class="fa fa-file-text-o fa-5x light contract_icon"></i></a>
+                        <div class="status_indicator complete"></div>
+                        <div class="contract_status">
+                            Complete
+                        </div>
+                     <a><i class="fa fa-chevron-down contract_cheveron_toggledropdown" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="contract_name">
+                    Contract Name
+                </div>
+                <div class="icon_wrapper">
+                    <a><i class="fa fa-file-text-o fa-5x light contract_icon"></i></a>
+                    <div class="status_indicator complete"></div>
+                    <div class="contract_status">
+                        Complete
+                    </div>
+                    <a><i class="fa fa-chevron-down contract_cheveron_toggledropdown" aria-hidden="true"></i></a>
+                </div>
+            </div>
+                    @*Use cheverons to scroll through all of the contracts?*@
+            <div class="col-md-1">
+                <a><i href="#" class="fa fa-chevron-right fa-2x contract_cheveron" aria-hidden="true"></i></a>
+            </div>
+
+        </div>
+
+
+
+        <div class="row spacer-large">
+            <div class="col-md-1">
+               
+            </div>
+            <div class="col-md-7">
+                <div class="contract_options_header">
+                    Contract Options:
+                </div>
+                
+            </div>
+            <div class="col-md-2">
+                <div class="contract_options_header text-center">
+                    Accept
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="contract_options_header text-center">
+                    Negotiate
+                </div>
+            </div>
+        </div>
+
+        @*start grid of contract options*@
+        <div class="row spacer">
+            <div class="col-md-1">   @*Info tag to describe what each option mean, get from client*@
+                <a><i class="fa fa-question-circle-o contract_info fa-3x" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Example 1
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control change_option">
+                    <option>Change Option:</option>
+                    <option> test </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <a><i class="fa fa-question-circle-o contract_info fa-3x" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Example 2
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control change_option">
+                    <option>Change Option:</option>
+                    <option> test </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1">
+                <a><i class="fa fa-question-circle-o contract_info fa-3x" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Example 3
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control change_option">
+                    <option>Change Option:</option>
+                    <option> test </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox text-center">
+                    <label>
+                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        
+        @*offer buttons*@
+        <div class="spacer-large">
+            <div class="col-md-3 text-center">
+                <button class="btn btn-md btn-gray">Escrow Deposit</button>
+                <div>
+                    Deposit will light up after
+                    all terms are agreed upon
+                </div>
+            </div>
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-md btn-blue">Review Contract</button>
+                <div>
+                    Explanation of each Deal Desk
+                    options in Review
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-md btn-pink">Submit Offer</button>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+@*Calendar Section*@
+<section class="section-padding">
+    <div class="container">
+        <div class="row section-font">
+            <h2 class="section-font col-md-12 text-center">Calender</h2>
+        </div>
+     <div class="row">
+        @*@Calendar JS here*@
+        <div id="dealdesk_calendar" class="row spacer">
+            <div class="col-md-7 pull-right calendar_area">
+
+            </div>
+
+        </div>
+        
+
+
+        @*Timeline section*@
+        <div class="row">
+            <div class="col-md-4">
+                    <div class="panel panel-default panel_border">
+                        <div class="panel-heading row row_no_margin">
+                            <h2 class="panel-title panel_date col-md-9 ">month.date</h2>
+                            <i class="fa fa-check fa-2x col-md-offset-2 timeline_check_past no_padding" aria-hidden="true"></i>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="timeline">title.date</h3>
+                            <div class="timeline_titledate">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit, mi a dictum rutrum, nisi dui consequat sapien, vitae ullamcorper.
+                            </div>
+                        </div>
+                    </div>
+
+                <hr class="hr_timeline_line text-center">
+
+                <div class="panel panel-default panel_border">
+                    <div class="panel-heading row row_no_margin">
+                        <h2 class="panel-title panel_date col-md-9 ">month.date</h2>
+                        <i class="fa fa-check fa-2x col-md-offset-2 timeline_check_past no_padding" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body">
+                        <h3 class="timeline">title.date</h3>
+                        <div class="timeline_titledate">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit, mi a dictum rutrum, nisi dui consequat sapien, vitae ullamcorper.
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="hr_timeline_line text-center">
+
+                <div class="panel panel-default panel_border">
+                    <div class="panel-heading row row_no_margin">
+                        <h2 class="panel-title panel_date col-md-9 ">month.date</h2>
+                        <i class="fa fa-check fa-2x col-md-offset-2 timeline_check_future no_padding" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel-body">
+                        <h3 class="timeline">title.date</h3>
+                        <div class="timeline_titledate">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit, mi a dictum rutrum, nisi dui consequat sapien, vitae ullamcorper.
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+
+
+
+@*Showing/lockbox button & Help section ==== This section stays visible all the time ====*@
+<section class="bg spacer section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 spacer-large">
+                <div class="text-center pull-left">
+                    Go to Lockbox and Showing Center<br />
+                    <a href="~/lockbox/video" class="btn btn-md btn-pink spacer">Showing Center</a>
+                </div>
+            </div>
+            <div class="col-md-6 spacer-large">
+                <div class="text-center pull-right">
+                    Need Help?<br />
+                    <a href="~/account/Help" class="btn btn-md btn-blue spacer">Support Center</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

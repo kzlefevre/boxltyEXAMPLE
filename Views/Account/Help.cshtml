@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = TempData["name"] + " Help";
+    Layout = "~/Views/Shared/_tinyLayout.cshtml";
+}
+
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+            
+                @Html.Partial("~/Views/Shared/_tinyHeader.cshtml")
+          
+        </div>
+        <div class="row">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <span class="glyphicon glyphicon-lock"></span>@TempData["name"] Password Recovery
+                    </div>
+                    <span class="panel-title-sm pull-right padding-right-sm"><b></b></span>
+                </div>
+
+                <form id="f_userword" method="POST" data-bind="submit: submit">
+                    @Html.AntiForgeryToken()
+                    <input name="h_word" type="hidden" data-bind="value: sha1()"/>
+
+                    <input name="h_inst" type="hidden" value="@TempData["inst"]"/>
+                    <input id="h_code" name="h_code" type="hidden" value="@TempData["code"]"/>
+                    <input id="h_comp" type="hidden" value="@TempData["comp"]"/>
+
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" name="t_emal" class="form-control" maxlength="256" autocomplete="off" placeholder="Email Address" data-bind="value: email, validationElement: email" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group ">
+                                <span class="input-group-addon"><span class="glyphicons glyphicons-lock"></span> </span>
+                                <input name="t_ssn4" type="text" class="form-control" maxlength="256" autocomplete="off" placeholder="Security Passphrase" required data-bind="value: ssn4, validationElement: ssn4"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><span class="glyphicons glyphicons-keys"></span> </span>
+                                <input id="t_word" type="password" class="form-control" maxlength="16" autocomplete="off" placeholder="Create New Password" required data-bind="value: word1, validationElement: word1"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><span class="glyphicons glyphicons-keys"></span> </span>
+                                <input type="password" class="form-control" maxlength="16" autocomplete="off" placeholder="Confirm New Password" required data-bind="value: word2, validationElement: word2"/>
+                            </div>
+                        </div>
+
+                        <div id="x_login" class="alert alert-warning login-alert" style="display: none;">
+                            <b>Please</b> fill in all required fields.
+                        </div>
+                        <div id="x_login_invalid" class="alert alert-warning login-alert" style="display: none;">
+                            <b>Not Found</b> the information you entered does not match our records. Please contact support for assistance.
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <span class="panel-title-sm pull-left" style="padding-top: 7px;"><a href="/@TempData["code"]">Login</a> | <a href="/Home/Contact/@TempData["code"]">Contact Support</a></span>
+                        <div class="form-group margin-bottom-none">
+                            <input class="btn btn-primary pull-right" type="submit" value="Set Password &amp; Login"/>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </form>
+                <div id="c_help" style="display: none">
+                    <div class="alert alert-info">
+                        <b></b>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

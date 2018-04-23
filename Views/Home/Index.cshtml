@@ -1,0 +1,92 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_publicLayout.cshtml";
+}
+<div class="hero-unit home">
+    <div class="container hero">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-content">
+                    <h1 class="your-move">Make Your Move</h1>
+                    <h2 class="sub">Buy, Sell, search and gain instant access to properties worldwide.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row home-search spacer center">
+            <div class="col-md-12">
+                <form class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search by Neighborhood, Address, City, School" aria-describedby="basic-addon2">
+                    <a href="#" class="btn btn-search">search</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</div>
+<div class="container">
+    <div class="row spacer-large">
+        <div class="col-md-10 col-md-offset-1 center">
+            <h1 class="no-margin">Discover, Buy, Sell, Save.</h1>
+            <h3>
+                Discover the industry's most intelligent and efficient way to showcase your property, save your equity and find the perfect home. Why pay more for our competitor’s outdated technology and expensive 6% fees? Get notified instantly about showings, offers from potential buyers for as low as 1.5% 
+            </h3>
+        </div>
+        <div class="col-md-1">&nbsp;</div>
+    </div>
+</div>
+<section class="featured-listings spacer-large">
+    <div class="container">
+        @Html.Partial("~/Views/Shared/_featuredListing.cshtml")
+    </div>
+</section>
+<section class="recently-added">
+    <div class="container">
+        @Html.Partial("~/Views/Shared/_recentlyAdded.cshtml")
+    </div>
+</section>
+<section class="buy section-spacer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 no-pad right vcenter">
+                <img src="/img/buy-sm.png" class="half_width" alt="Buy" />
+            </div><!--
+            --><div class="col-md-6 vcenter">
+                <h1>BUY</h1>
+                <p>Search and select your preferred homes via the system app. Gain immediate access to properties for touring - all on your own schedule. Want to see more homes? Connect with a Boxlty agent and see all the homes in the MLS for sale in your area.</p>
+                <p><a href="/home/buy" class="btn btn-md btn-blue">explore</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sell">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 vcenter">
+                <h1>SELL</h1>
+                <p>Boxlty simplifies the real estate transaction process by implementing technology and experienced agents to market, show, and negotiate the sale of your home. Incorporating a mobile verified ID system with our app and a secure smart ID lockbox, the Boxlty system offers a revolutionary way to sell your home - online or from a mobile phone.</p>
+                <p><a href="/home/sell"  class="btn btn-md btn-blue">list</a></p>
+            </div><!--
+            --><div class="col-md-6 no-pad left vcenter">
+                <img src="/img/sell-sm.png" class="half_width" alt="Sell" />          
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lease">
+    <div class="container">
+        <div class="row no-gutter">
+            <div class="col-md-6 no-pad right vcenter">
+                <img src="/img/lease-sm.png" class="half_width" alt="Lease" />
+            </div><!--
+            --><div class="col-md-6 vcenter">
+                <h1>LEASE</h1>
+                <p>With secure and immediate access to rental property through Boxlty's smart ID lockbox and app technologies, the system streamlines the showing and application process – all with a smartphone with owner notifications and secure ID of who has seen the home providing peace of mind.</p>
+                <p><a  href="/home/whyboxlty"  class="btn btn-md btn-blue">research</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

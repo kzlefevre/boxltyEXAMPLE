@@ -1,0 +1,412 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Property Details";
+    Layout = "~/Views/Shared/_publicLayout.cshtml";
+}
+
+<div class="container container_body spacer-large">
+
+</div>
+<div data-bind="foreach: list">
+    <section id="listing">
+        <section id="headline_details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header_details_left">
+                            <h1 class="header_address" data-bind="html: address.deliveryLine">327 E. MAPLE ST, YORK, PA 17403</h1>
+                            <div class="header_sub_details">
+                                <span data-bind="html: '$'+listPrice">$255,000</span><span class="header_mortgage">/ Est $989 /MO</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span data-bind="html: beds + ' Bed'">3 Bed</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span data-bind="html: baths.total + ' Bath'">2 Bath</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span data-bind="html: $data.size ? size + ' sq. ft.' : 'NO DATA'">1800 sq. ft.</span>
+                            </div>
+                        </div>
+                        <div class="header_details_right">
+                            Added on Boxlty: April 24th 2017<br />
+                            Status: <span class="listing_status">Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="listing_photos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="listing_main_photo">
+                            <img data-bind="attr: {src: images[0]}" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="carousel-example-generic" class="carousel slide" data-interval="false">
+
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <!--ko foreach: images-->
+                                        <!--ko if:$index() > 1-->
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-1.png" alt="Featured Listing" data-bind="attr: {src: $data}"/>
+                                            </div>
+                                        </div>
+                                        <!--/ko-->
+                                        <!--/ko-->
+                                        @*<div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-3.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>*@
+                                    </div>
+                                    @*<div class="row">
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-1.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-3.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                </div>
+                                @*<div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-1.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-3.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-1.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="listing_thumbs">
+                                                <img src="/img/house-3.png" alt="Featured Listing" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            </div>
+
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <div class="text-center spacer">
+                            Schedule a Showing?<br />
+                            <a class="btn btn-lg btn-pink" data-bind="click: $root.contactAgent">Contact Boxlty Agent</a>
+                        </div>
+
+                        @*schedule showing modal*@
+                        <div id="scheduleshowing" class="modal fade" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal_background">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" aria-label="Close" data-bind="click:close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Schedule a Showing</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            @*<input type="text" class="form-control spacer" id="name" placeholder="name">*@
+                                            <div class="form-group">
+                                                <label for="" class="control-label">First Name:</label>
+                                                <input type="text" class="form-control" id="" placeholder="Required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Last Name:</label>
+                                                <input type="text" class="form-control" id="" placeholder="Required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Email Address:</label>
+                                                <input type="text" class="form-control" id="" placeholder="Required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Phone Number:</label>
+                                                <input type="text" class="form-control" id="" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Preferred Date:</label>
+                                                <input type="text" class="form-control" id="" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Comments:</label>
+                                                <textarea type="text" rows="5" class="form-control" id="" placeholder=""></textarea>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer text-center">
+                                        <a class="btn btn-pink btn-lg">Contact Agent</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="listing_overview">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="listing_sect_h1">About the Property</h1>
+                        <p data-bind="html: description">
+                            Opportunity knocks in this Old Town contemporary remodel located just one block from Lake Sheldon and City Park! Custom stair rail,
+                            designer finishes & gleaming wood floors surround an open concept kitchen leading to an expansive back deck for relaxing & entertaining.
+                            Feel right at home the moment you walk into this west facing, light and bright charmer. Add a garden to your fully customizable
+                            backyard just ready for your imagination. Extra storage space & a garage for added convenience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="listing_details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="listing_sect_h1">Key Features</h1>
+                                <ul class="details_list">
+                                    <li data-bind="html: $data.lotSize ? lotSize.sqft +' SQFT' : 'NO DATA'">Lot: 3,245 SQFT</li>
+                                    <li data-bind="html: propertyType">Single Family Home</li>
+                                    <li data-bind="html: $data.yearBuilt ? 'Built in '+yearBuilt : 'NO DATA'">Built in 1942</li>
+                                    <li>Attached Garage</li>
+                                    <li>Central Air</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h1 class="listing_sect_h1">Facts</h1>
+                                <ul class="details_list">
+                                    <li data-bind="html: $data.lotSize ? lotSize.sqft +' SQFT' : 'NO DATA'">Lot: 3,245 SQFT</li>
+                                    <li data-bind="html: propertyType">Single Family Home</li>
+                                    <li data-bind="html: $data.yearBuilt ? 'Built in '+yearBuilt : 'NO DATA'">Built in 1942</li>
+                                    <li>Attached Garage</li>
+                                    <li>Central Air</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="listing_sect_h1">Contact Seller</h1>
+                        <div class="row">
+                            <div class="col-md-6 vcenter">
+
+                                <div class="seller_img">
+                                    <img src="~/img/lease-sm.png" />
+                                </div>
+
+                            </div>
+                            <!--
+                            -->
+                            <div class="col-md-6 vcenter">
+                                <a href="#" class="btn btn-blue btn-sm">Message</a>
+                                <a href="#" class="btn btn-pink btn-sm">Make an Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+<div id="modal1" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal_background">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Update Property</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    @*<input type="text" class="form-control spacer" id="name" placeholder="name">*@
+                    <div class="form-group">
+                        <label for="" class="control-label">Street Address:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">City:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">State:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">Zip Code:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">Price:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">Number of Bedrooms:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">Number of Bathrooms:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">Square Feet:</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">Foundation Type:</label>
+                        <select class="form-control" data-bind="options: foundationtype.list, optionsText: 'name', optionsValue: 'name'"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-gray2" data-dismiss="modal">Close</a>
+                <a class="btn btn-primary">Save changes</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*Home Juction API Below*@
+
+
+@*HOME VALUE AMV*@
+<section id="homevalue" class="spacer section-padding">
+    <div class="container">
+        <div class="row section-font sectionbottomspacing">
+
+            <i class="fa fa-usd fa-3x col-md-1" aria-hidden="true"></i>
+            <h2 class="settings section-font text-uppercase col-md-6 settings_nomargin">Property Value Estimation</h2>
+        </div>
+
+        <div>
+            Home Junction API info for AMV
+        </div>
+        <div>
+            <label>$<span data-bind="html: emv"></span></label>
+        </div>
+
+    </div>
+</section>
+
+@*location and neighborhood*@
+<section id="proplocation" class="bg spacer section-padding" data-bind="foreach: demographics">
+    <div class="container">
+        <div class="row section-font sectionbottomspacing">
+
+            <i class="fa fa-map fa-3x col-md-1 sideiconspacing" aria-hidden="true"></i>
+            <h2 class="settings section-font text-uppercase col-md-6 section-bottom-spacing settings_nomargin">Location and Neighborhood</h2>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div class="">
+                    Map with property icon Here:
+
+                </div>
+            </div>
+
+            <div class="col-md-3 list-vertical">
+                <ul class="">
+                    Cost of Living
+                    <li data-bind="html: 'Education: '+costs.education">Education: </li>
+                    <li data-bind="html: 'Overall: '+costs.overall">Overall: </li>
+                    <li data-bind="html: 'Utilities: '+costs.utilities">Utilities: </li>
+                    <li>more here...</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 list-vertical">
+                <ul class="">
+                    Population
+                    <li data-bind="html: 'Current: '+population.current">Current: </li>
+                    <li data-bind="html: 'Density: '+population.density">Density: </li>
+                    <li data-bind="html: '1990: '+population['1990']">1990: </li>
+                    <li data-bind="html: '2000: '+population['2000']">2000: </li>
+                    <li data-bind="html: '2010: '+population['2010']">2010: </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@*School data*@
+<section id="propschooldata" class="spacer section-padding">
+    <div class="container">
+        <div class="row section-font sectionbottomspacing">
+
+            <i class="fa fa-graduation-cap fa-3x col-md-1" aria-hidden="true"></i>
+            <h2 class="settings section-font text-uppercase col-md-6 settings_nomargin">Nearby Schools</h2>
+        </div>
+
+        @*display Home Junction API data below*@
+
+        <div class="row text-center">
+            <div class="col-md-4 list-vertical" data-bind="foreach: list">
+                <ul class="">
+                    Elementary School
+                    <li data-bind="html: $data.schools ? schools.elementary : 'NO DATA'">(closest elementary school name & rating)</li>
+                    <li>property.label</li>
+                    <li>property.name</li>
+                    <li>property.admission</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 list-vertical" data-bind="foreach: list">
+                <ul class="">
+                    Middle School
+                    <li data-bind="html: $data.schools ? schools.middle : 'NO DATA'">(closest middle school name & rating)</li>
+                    <li>property.label</li>
+                    <li>property.name</li>
+                    <li>property.admission</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 list-vertical" data-bind="foreach: list">
+                <ul class="">
+                    High School
+                    <li data-bind="html: $data.schools ? schools.high : 'NO DATA'">(closest high school name & rating)</li>
+                    <li>property.label</li>
+                    <li>property.name</li>
+                    <li>property.admission</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+@*Save & Help section*@
+<section class="bg spacer section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 spacer-large">
+
+            </div>
+            <div class="col-md-6 spacer-large">
+                <div class="text-center pull-right">
+                    Need Help?<br />
+                    <button class="btn btn-md btn-blue spacer">Support Center</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

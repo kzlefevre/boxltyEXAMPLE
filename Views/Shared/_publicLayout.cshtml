@@ -1,0 +1,65 @@
+﻿@using snapi.Core.Application
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>@ViewBag.Title | boxlty</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"/>
+
+    @RenderSection("layout_headMeta", required: false)
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,500">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    @Styles.Render("~/content/vendor")
+    @*
+    @Styles.Render("~/content/jquery")
+    @Styles.Render("~/content/template")*@
+
+    @Styles.Render("~/content/public")
+
+
+    @Html.Partial("_RequireJS")
+    @Html.Partial("_SiteAnalytics")
+    @RenderSection("layout_headClose", required: false)
+    <script src="https://use.fontawesome.com/14b2d87ce2.js"></script>
+
+</head>
+
+<body>
+
+<section id="header" class="header">
+    @Html.Partial("~/Views/Shared/_publicHeader.cshtml")
+</section>
+
+
+<section is="content" class="body">
+    @RenderBody()
+</section>
+
+<section id="footer" class="footer">
+    @Html.Partial("~/Views/Shared/_publicFooter.cshtml")
+</section>
+
+<input type="hidden" id="h_ip" value="@Request.UserHostAddress"/>
+<input type="hidden" id="h_ng" value="@Guid.NewGuid().ToString()"/>
+<input type="hidden" id="h_bn" value="@CFG.Site.Version"/>
+<input type="hidden" id="h_vk" value="@CFG.Site.VersionKey"/>
+<input type="hidden" id="h_ik" value="@CFG.Site.InstanceKey"/>
+<input type="hidden" id="h_ul" value="@CFG.Site.BaseUrl"/>
+<input type="hidden" id="h_bk" value="@CFG.Site.BuildKey"/>
+
+<input type="hidden" id="h_pr" value="@TempData["pagerole"]" />
+<input type="hidden" id="h_id" value="@TempData["id"]"/>
+
+
+@RenderSection("layout_bodyClose", required: false)
+</body>
+</html>
+
+

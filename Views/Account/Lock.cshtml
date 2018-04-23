@@ -1,0 +1,48 @@
+﻿@using snapi
+@{
+    ViewBag.Title = "Screen Locked";
+    Layout = "~/Views/Shared/_tinyLayout.cshtml";
+}
+
+<div id="main">
+    <div class="container">
+        <div class="row">
+            @Html.Partial("~/Views/Shared/_tinyHeader.cshtml")
+        </div>
+        <div class="row">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <span class="glyphicon glyphicon-lock"></span> Locked
+                    </div>
+                    <a href="/Account/LogOff" class="panel-title-sm pull-right padding-right-sm">Not <b>Jon Ezra?</b></a>
+                </div>
+                <form class="cmxform" id="altForm" method="get">
+                    <div class="panel-body">
+                        <div class="login-avatar">
+                            <div class="login-info"> <span class="login-name"> <b class="text-primary">Jon Ezra</b> - inactive out for <b>5 minutes</b></span> <span class="login-email"> jon@snapisoft.com </span> </div>
+                        </div>
+                        <div class="form-group margin-right-sm">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+                                <input type="text" class="form-control product" maxlength="10" autocomplete="off" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="login-alert hide">
+                            <div class="alert alert-warning">
+                                Please read our <b>Terms of Use</b> before logging in.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <span class="panel-title-sm pull-left" style="padding-top: 7px;"><a> Forgotten Password?</a></span>
+                        <div class="form-group margin-bottom-none">
+                            <a class="btn btn-primary pull-right" href="/test">Unlock</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
